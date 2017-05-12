@@ -13,40 +13,47 @@ src\$ json-server --watch db\db.json
 #1. Develop a basic reporting portal using any frameworks you see fit for purpose.
 ![Example Reporting Porta](/example-2.png "Example Reporting Portal")
 
-#2. Allow the ability for the user to toggle day consolidation for Payments of the same day.
+#2. Allow the ability for the user to toggle Quarter and Month consolidation.
 
 For example:-
 
-|Date       | CPMU|
+|Month       | CPMU|
 |---------- | ----------| 
-|04/01/2015 | 33.06779|
-|04/01/2015 | 67.77988|
-|05/01/2015 | 93.67872|
+|01 January 2012|	5.47388874|
+|01 February 2012|	57.65682657|
+|01 March 2012|	12.12591551|
+|01 May 2012|	67.77995238|
+|01 June 2012|	93.67857009|
+
 
 
 Should be displayed as:
 
-|Date       | CPMU|
+|Quarter       | CPMU|
 |---------- | ----------|
-|04/01/2015 | 100.84767|
-|05/01/2015 | 93.67872|
+|1|	7.186971458|
+|2|	82.6888992|
 
-#3. Within the report there are missing days for when payments are not made, these days should be displayed as 0.
+
+#3. Within the report there are missing months when data are not available, these days should be displayed as 0.
 
 For example:-
 
-Date       | Amounts
+Month       | Amounts
 ---------- | ----------|
-12/01/2015 | 134.07635 
-17/01/2015 | 3.539273
+|01 February 2012|	57.65682657|
+|01 March 2012|	12.12591551|
+|01 May 2012|	67.77995238|
+|01 June 2012|	93.67857009|
+
 
 Should be displayed as:
 
-|Date       | Amounts
+|Month       | Amounts
 |---------- | ----------|
-|12/01/2015 | 134.07635 |
-|13/01/2015 | 0.0000|
-|14/01/2015 | 0.0000|
-|15/01/2015 | 0.0000|
-|16/01/2015 | 0.0000|
-|17/01/2015 | 3.539273|
+|01 February 2012|	57.65682657|
+|01 March 2012|	12.12591551|
+|01 April 2012|	0.00000|
+|01 June 2012|	93.67857009|
+|01 July 2012|	57.29516406|
+
