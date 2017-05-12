@@ -4,18 +4,20 @@ Imagine you have been tasked by the Account Manager to create a basic reporting 
 The company already has an internal json rest api that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
 
 The internal json rest api can be hosted locally using the following commands:
-```shell
-src\$ npm install -g json-server
 
-src\$ json-server --watch db\db.json
+```shell
+$ npm install -g json-server
+
+$ json-server --watch db/db.json
 ```
 
-#1. Develop a basic reporting portal using any frameworks you see fit for purpose.
+## 1. Develop a basic reporting portal using any frameworks you see fit for purpose.
+
 ![Example Reporting Porta](/example-2.png "Example Reporting Portal")
 
-#2. Allow the ability for the user to toggle Quarter and Month consolidation.
+## 2. Allow the ability for the user to toggle Quarter and Month consolidation.
 
-For example:-
+For example:
 
 |Month       | CPMU|
 |---------- | ----------| 
@@ -25,8 +27,6 @@ For example:-
 |01 May 2012|	67.77995238|
 |01 June 2012|	93.67857009|
 
-
-
 Should be displayed as:
 
 |Quarter       | CPMU|
@@ -35,9 +35,9 @@ Should be displayed as:
 |2|	82.6888992|
 
 
-#3. Within the report there are missing months when data are not available, these days should be displayed as 0.
+## 3. Within the report there are missing months when data are not available, these days should be displayed as 0.
 
-For example:-
+For example:
 
 Month       | Amounts
 ---------- | ----------|
@@ -45,7 +45,6 @@ Month       | Amounts
 |01 March 2012|	12.12591551|
 |01 May 2012|	67.77995238|
 |01 June 2012|	93.67857009|
-
 
 Should be displayed as:
 
@@ -56,4 +55,3 @@ Should be displayed as:
 |01 April 2012|	0.00000|
 |01 June 2012|	93.67857009|
 |01 July 2012|	57.29516406|
-
