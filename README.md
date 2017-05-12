@@ -11,7 +11,7 @@ src\$ json-server --watch db\db.json
 ```
 
 #1. Develop a basic reporting portal using any frameworks you see fit for purpose.
-![Example Reporting Porta](/example-1.png "Example Reporting Portal")
+![Example Reporting Porta](/example-2.png "Example Reporting Portal")
 
 #2. Allow the ability for the user to toggle day consolidation for Payments of the same day.
 
