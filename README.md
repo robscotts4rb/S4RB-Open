@@ -1,7 +1,7 @@
 # Interview Questions #
 
-Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view payments via a online portal.
-The company already has an internal json rest api that stores all the payments that the business has taken.
+Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
+The company already has an internal json rest api that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
 
 The internal json rest api can be hosted locally using the following commands:
 ```shell
@@ -17,7 +17,7 @@ src\$ json-server --watch db\db.json
 
 For example:-
 
-|Date       | Amounts|
+|Date       | CPMU|
 |---------- | ----------| 
 |04/01/2015 | 33.06779|
 |04/01/2015 | 67.77988|
@@ -26,7 +26,7 @@ For example:-
 
 Should be displayed as:
 
-|Date       | Amounts|
+|Date       | CPMU|
 |---------- | ----------|
 |04/01/2015 | 100.84767|
 |05/01/2015 | 93.67872|
