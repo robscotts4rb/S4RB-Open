@@ -4,7 +4,7 @@
   "description": "Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.\r The company already has an internal json rest api that stores all the complaints that the business has recieved and the number of corresponding sales in that period.",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
     "morgan": "~1.7.0",
     "path": "^0.12.7",
     "pug": "^2.0.0-rc.1",

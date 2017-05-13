@@ -1,8 +1,29 @@
 body {
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-    font-size: 1.3em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     color: #333;
     background: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    padding: 2%;
 }
