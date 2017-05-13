@@ -57,7 +57,3 @@ exports.index = function (req, res, next) {
             res.render('index', {title: 'Complaints per million units', data: []});
         });
 };
-
-exports.test = function (req, res, next) {
-    res.render('index', {title: 'Complaints per million units', data: []});
-};
