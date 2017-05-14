@@ -39,10 +39,6 @@ app.controller('myCtrl', function ($scope) {
         }
     };
 
-    $scope.modDate = () => {
-        return $scope.tasks.filter(task => !task.completed);
-    };
-
     $scope.init = function(data)
     {
         $scope.original = data;
@@ -61,10 +57,9 @@ app.controller('myCtrl', function ($scope) {
                 totalUS += data[i-1]['UnitsSold'];
 
                 if (i % 3 === 0){
-                    console.log(i,totalC,totalUS );
                     $scope.quarterly.push({"date": quarter, "cpmu" : ((totalC / totalUS) * 1000000).toPrecision(10)});
                     totalC = 0;
-                    totalCP = 0;
+                    totalUS = 0;
                     quarter++;
                 }
 

@@ -18,17 +18,32 @@ const getOptions = {
     json: true
 };
 
-exports.index = function (req, res, next) {
+exports.angular = function (req, res) {
 
     rp(getOptions)
         .then(function (response) {
 
             let data = helper.sortedResponse(response);
 
-            res.render('index', {title: 'Complaints per million units', data: JSON.stringify(data)});
+            res.render('index-angular', {title: 'Complaints per million units', data: JSON.stringify(data)});
         })
         .catch(function (err) {
             console.log(err);
-            res.render('index', {title: 'Complaints per million units', data: []});
+            res.render('index-angular', {title: 'Complaints per million units', data: []});
+        });
+};
+
+exports.vue = function (req, res) {
+
+    rp(getOptions)
+        .then(function (response) {
+
+            let data = helper.sortedResponse(response);
+
+            res.render('index-vue', {title: 'Complaints per million units', data: JSON.stringify(data)});
+        })
+        .catch(function (err) {
+            console.log(err);
+            res.render('index-vue', {title: 'Complaints per million units', data: []});
         });
 };
