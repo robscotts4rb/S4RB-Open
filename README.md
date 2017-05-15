@@ -6,7 +6,7 @@
 * [Thought Process](#thought)
 * [JavaScript with jQuery](#jquery)
 * [Ruby with Sinatra](#sinatra)
-* [JavaScript with Angular 2](#angular)
+* [JavaScript with Angular](#angular)
 
 ## <a name="Task">Task Outline</a>
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
@@ -31,7 +31,7 @@ I would like to view complaint listed quarterly
 ```
 As an Account Manager
 So that I know each month has data
-I would like to view month with 0 complaints as 0.00000000
+I would like to view missing months with the CPMU as 0.00000
 ```
 
 ## <a name="thought">Thought Process</a>
@@ -63,6 +63,7 @@ CPMU
 | quartile     | Calculate quartile index
 | display_date | Display formatted date
 | check_error  | Error checking
+| complaints   | Calculate any missing months
 
 ## <a name="server">Json Server</a>
 ### Setup
@@ -108,8 +109,8 @@ $ ruby ./app/controller.rb
 Open http://localhost:4567 in your web browser
 ```
 
-## <a name="angular">JavaScript with Angular 2</a>
-The JavaScript with Angular 2 can be hosted locally using the following commands:
+## <a name="angular">JavaScript with Angular</a>
+The JavaScript with Angular can be hosted locally using the following commands:
 ```shell
 $ cd Angular
 ```
@@ -117,8 +118,3 @@ Running the web application
 ```
 Open index.html in your web browser
 ```
-
-
-
-![Example Reporting Porta](/example-2.png "Example Reporting Portal")
-
