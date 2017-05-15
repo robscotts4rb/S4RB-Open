@@ -5,10 +5,20 @@
     <td width="200"><b>CPMU</b></td>
   </tr>
   <% @data.each do |cpmu_data| %>
+    <% while (DateTime.parse(cpmu_data["Month"]).to_s != @next_month.to_s) do %>
+      <tr>
+          <td width="200"><%= CPMU.display_date(@next_month.to_s) %></td>
+          <td width="200">0.00000</td>
+      </tr>
+      <% @next_month = CPMU.next_month(@next_month.to_s) %>
+    <% end %>
+
     <% total = CPMU.calculate(cpmu_data["Complaints"].to_f,cpmu_data["UnitsSold"].to_f)%>
     <tr>
         <td width="200"><%= CPMU.display_date(cpmu_data["Month"]) %></td>
         <td width="200"><%= total %></td>
     </tr>
+    <% @next_month = CPMU.next_month(cpmu_data["Month"]) %>
+
   <%end%>
 </table>

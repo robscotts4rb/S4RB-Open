@@ -12,6 +12,7 @@ class Server < Sinatra::Base
   get '/monthly' do
     @api = JsonApi.new
     @data = @api.readAPI()
+    @next_month = DateTime.parse(@data[0]["Month"])
     erb :'monthly/index'
   end
 

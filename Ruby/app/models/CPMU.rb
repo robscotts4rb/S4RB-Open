@@ -21,6 +21,11 @@ class CPMU
     DateTime.parse(val1).strftime("%d %B %Y")
   end
 
+  def self.next_month(val1=nil)
+    check_error(val1)
+    DateTime.parse(val1) >> 1
+  end
+
   private
 
   def self.check_error(val1=-1, val2=-1, val3=-1)
