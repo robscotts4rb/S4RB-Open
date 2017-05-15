@@ -77,6 +77,8 @@ Open http://localhost:3000/CPMU in your web browser
 ```
 
 ## <a name="jquery">JavaScript with jQuery</a>
+This version is coded using JavaScript as the language with jQuery controlling the interactive elements of the page. It has been broken down into different classes with single responsibilities and easily extendable. 
+
 ### Setup
 The JavaScript with jQuery can be hosted locally using the following commands:
 ```shell
@@ -92,6 +94,8 @@ Open index.html in your web browser
 ```
 
 ## <a name="sinatra">Ruby with Sinatra</a>
+This version is coded using Ruby and the Sinatra framework which is a light weight web framework using RESTful technologies. The classes are broken down into models that all have single responsibilities and easily extendable.
+
 ### Setup
 The Ruby with Sinatra can be hosted locally using the following commands:
 ```shell
@@ -110,6 +114,9 @@ Open http://localhost:4567 in your web browser
 ```
 
 ## <a name="angular">JavaScript with Angular</a>
+This version is also coded in JavaScript using the Angular framework using a controller and web page for a single page application.
+
+### Setup
 The JavaScript with Angular can be hosted locally using the following commands:
 ```shell
 $ cd Angular
