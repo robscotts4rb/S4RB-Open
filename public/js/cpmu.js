@@ -1,4 +1,4 @@
-let app = angular.module('myApp', []);
+const app = angular.module('myApp', []);
 
 app.filter('myDateFormat', function myDateFormat($filter) {
     return function (text) {

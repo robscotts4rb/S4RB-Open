@@ -1,0 +1,10 @@
+extends layout
+block prescripts
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
+  script(src='/js/cpmu-component.js')
+block content
+  div.container
+    h1= title
+    div(ng-app="myApp").content
+      div.tbl-options
+        cpmu-table( data=data)

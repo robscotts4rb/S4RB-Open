@@ -20,22 +20,22 @@
                     </tr>
                     </thead>
                     <transition-group name="list" tag="tbody" mode="out-in">
-                        <tr v-for="item in pagResults" :key="item">
+                        <tr v-for="item in pageResults" :key="item">
                             <td style="width:50%;">{{ item.date}}</td>
                             <td style="width:50%;">{{ item.cpmu}}</td>
                         </tr>
                     </transition-group>
                 </table>
                 <div class="pull-left">
-                    <p v-if="sortedData.length > this.rowsPerPage">Showing <span class="bold">{{ ((this.rowsPerPage * (this.currentPage)) +
-                        this.pagResults.length) }}</span> of <span class="bold">{{ sortedData.length}}</span></p>
+                    <p v-if="normalisedData.length > this.rowsPerPage">Showing <span class="bold">{{ ((this.rowsPerPage * (this.currentPage)) +
+                        this.pageResults.length) }}</span> of <span class="bold">{{ normalisedData.length}}</span></p>
                 </div>
                 <div class="btn-group pull-right">
                     <button v-if="currentPage != 0"
                             @click="currentPage--" :class="[nextPage ? 'show-prev' :'hide-prev', 'btn']">
                         Prev
                     </button>
-                    <button v-if="sortedData.length > this.rowsPerPage && (currentPage + 1) < maxPage"
+                    <button v-if="normalisedData.length > this.rowsPerPage && (currentPage + 1) < maxPage"
                             @click="(currentPage + 1) < maxPage ? currentPage++ : ''" class="btn">Next
                     </button>
                 </div>
@@ -85,27 +85,27 @@
         data: function () {
             return {
                 temp: [],
-                sortedData: [],
+                normalisedData: [],
                 monthly: [],
                 quarterly: [],
                 showQuarterly: false,
-                headerOne: 'Monthly',
+                headerOne: 'Month',
                 headerTwo: 'CPMU',
                 buttonText: 'Quarterly',
                 currentPage: 0,
             }
         },
         computed: {
-            pagResults() {
-                if (this.sortedData.length > 0) {
-                    return this.sortedData.slice((this.rowsPerPage * this.currentPage), this.rowsPerPage * (this.currentPage + 1));
+            pageResults() {
+                if (this.normalisedData.length > 0) {
+                    return this.normalisedData.slice((this.rowsPerPage * this.currentPage), this.rowsPerPage * (this.currentPage + 1));
                 }
             },
             nextPage(){
                 return this.currentPage >= 1;
             },
             maxPage(){
-                return (this.sortedData.length / this.rowsPerPage)
+                return (this.normalisedData.length / this.rowsPerPage)
             }
         },
         watch: {},
@@ -145,13 +145,13 @@
                 this.currentPage = 0;
 
                 if (this.showQuarterly === true) {
-                    this.sortedData = this.quarterly;
+                    this.normalisedData = this.quarterly;
                     this.headerOne = 'Quarter';
                     this.buttonText = 'Monthly'
 
                 } else {
-                    this.sortedData = this.monthly;
-                    this.headerOne = 'Monthly';
+                    this.normalisedData = this.monthly;
+                    this.headerOne = 'Month';
                     this.buttonText = 'Quarterly'
                 }
             },
@@ -172,7 +172,7 @@
                     return item;
                 });
 
-                this.sortedData = this.monthly;
+                this.normalisedData = this.monthly;
             }
         },
         mounted() {

@@ -4,14 +4,14 @@ var helper = require('../helper/checkData');
 
 describe('sortedData', function() {
     it('should return array',function(){
-        var temp = helper.sortedResponse([]);
+        var temp = helper.normaliseResponse([]);
         expect(temp).to.eql([]);
     });
 });
 
 describe('sortedData', function() {
     it('should return array with 3 items',function(){
-        var temp = helper.sortedResponse([
+        var temp = helper.normaliseResponse([
             {"Value.date": "2012-01-01T00:00:00", "Complaints": 27, "UnitsSold": 4932508},
             {"Value.date": "2012-03-01T00:00:00", "Complaints": 10, "UnitsSold": 824680}
             ]);

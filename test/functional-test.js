@@ -16,3 +16,11 @@ describe('GET /vue', function() {
             .expect(200, done);
     });
 });
+
+describe('GET /angular-component', function() {
+    it('responds with 200', function(done) {
+        supertest(app)
+            .get('/')
+            .expect(200, done);
+    });
+});

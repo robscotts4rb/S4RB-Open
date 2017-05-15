@@ -2,7 +2,7 @@ const Moment = require('moment');
 const MomentRange = require('moment-range');
 const moment = MomentRange.extendMoment(Moment);
 
-exports.sortedResponse = function (response) {
+exports.normaliseResponse = function (response) {
 
     try {
         // find any missing months and add them
