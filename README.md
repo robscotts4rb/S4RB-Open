@@ -36,6 +36,22 @@ I would like to view month with 0 complaints as 0.00000000
 
 ## <a name="thought">Thought Process</a>
 
+The brief asked for this task to develop a portal using any framework and I I knew you use JavaScript I chose this language to code the task.  I have also submitted a Ruby version that is fully tested and coded. I’ve included an Angular 2 version that I used to experiment with using the framework.
+
+### Steps taken
+I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
+
+I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Good software craftsmanship was used through the project such as dependency injecting other classes into the class so that each class had a single purpose.
+
+Class hierarchy wasn’t used in this project as it was a small simple program and was not needed.
+
+Tests were put into place before any code was written so that it was clear what was needed to be produced before implementation of code.
+
+### Class Structure
+|JSONApi       |
+|----|
+|readApi()     | Reads Json object and returns data |
+
 
 ## <a name="server">Json Server</a>
 ### Setup
