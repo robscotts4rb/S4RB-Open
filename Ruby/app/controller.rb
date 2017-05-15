@@ -3,7 +3,6 @@ require_relative 'models/JsonApi'
 require_relative 'models/CPMU'
 
 class Server < Sinatra::Base
-  #set :port, 524922
 
   get '/' do
     erb :index
@@ -18,7 +17,8 @@ class Server < Sinatra::Base
 
   get '/quarterly' do
     @api = JsonApi.new
-    @data = @api.readAPI()
+    @api_data = @api.readAPI()
+    @data = CPMU.complaints(@api_data)
     erb :'quarterly/index'
   end
 

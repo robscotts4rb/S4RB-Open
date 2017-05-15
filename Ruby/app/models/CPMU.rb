@@ -26,6 +26,23 @@ class CPMU
     DateTime.parse(val1) >> 1
   end
 
+  def self.complaints(val1=nil)
+    check_error(val1)
+    month_val = DateTime.parse(val1[0]["Month"])
+    complaints = []
+
+    val1.each_with_index do |data, index|
+      while (DateTime.parse(val1[index]["Month"]).to_s != month_val.to_s) do
+        complaints << [0,0]
+        month_val = next_month(month_val.to_s)
+      end
+      complaints << [val1[index]["Complaints"].to_f,val1[index]["UnitsSold"].to_f]
+      month_val = next_month(val1[index]["Month"])
+    end
+    
+    complaints
+  end
+
   private
 
   def self.check_error(val1=-1, val2=-1, val3=-1)
