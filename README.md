@@ -48,10 +48,21 @@ Class hierarchy wasn’t used in this project as it was a small simple program a
 Tests were put into place before any code was written so that it was clear what was needed to be produced before implementation of code.
 
 ### Class Structure
-|JSONApi       |
-|----| ---- |
-|readApi()     | Reads Json object and returns data |
+JSONApi
 
+| Class | Description |
+|---- | ---- |
+| readApi()     | Reads Json object and returns data |
+
+CPMU
+
+| Class | Description |
+|---- | ---- |
+| calculate    | Calculate CPMU
+| quarter      | Calculate quarterly figure
+| quartile     | Calculate quartile index
+| display_date | Display formatted date
+| check_error  | Error checking
 
 ## <a name="server">Json Server</a>
 ### Setup
