@@ -1,4 +1,4 @@
-# S4RB Task #
+# S4RB Task - Adrian Eyre#
 
 ## Index
 * [Task Outline](#Task)
@@ -36,7 +36,7 @@ I would like to view month with 0 complaints as 0.00000000
 
 ## <a name="thought">Thought Process</a>
 
-The brief asked for this task to develop a portal using any framework and I I knew you use JavaScript I chose this language to code the task.  I have also submitted a Ruby version that is fully tested and coded. I’ve included an Angular 2 version that I used to experiment with using the framework.
+I have solved this task with three different solutions. The first was using JavaScript and jQuery, the second Ruby with Sinatra the the third with JavaScript and Angular. Each version is fully tests in it retrospective test framework with unit and feature tests. The Angular 2 version was used to experiment with using the framework. I have submitted all three solutions to show different coding qualities in each of the frameworks.
 
 ### Steps taken
 I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
