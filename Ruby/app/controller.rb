@@ -9,16 +9,16 @@ class Server < Sinatra::Base
   end
 
   get '/monthly' do
-    @api = JsonApi.new
-    @data = @api.readAPI()
-    @next_month = DateTime.parse(@data[0]["Month"])
+    api = JsonApi.new
+    api_data = api.readAPI()
+    @data = CPMU.complaints(api_data)
     erb :'monthly/index'
   end
 
   get '/quarterly' do
-    @api = JsonApi.new
-    @api_data = @api.readAPI()
-    @data = CPMU.complaints(@api_data)
+    api = JsonApi.new
+    api_data = api.readAPI()
+    @data = CPMU.complaints(api_data)
     erb :'quarterly/index'
   end
 

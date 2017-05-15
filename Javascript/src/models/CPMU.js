@@ -1,6 +1,10 @@
 (function(exports) {
 
-  function CPMU(){}
+  function CPMU(){
+    this.MONTHS = {"Jan":"January", "Feb":"February", "Mar":"March", "Apr":"April",
+    "May":"May", "Jun":"June", "Jul":"July", "Aug":"August", "Sep":"September",
+    "Oct":"October", "Nov":"November", "Dec":"December"};
+  }
 
   CPMU.prototype.calculate = function(val1=null, val2=null){
     this.checkerror(val1, val2);
@@ -21,17 +25,13 @@
   CPMU.prototype.display_date = function(val1=null){
     this.checkerror(val1);
     date = new Date(val1).toString().split(" ");
-    return date[2] + " " + date[1] + " " + date[3];
+    month = this.MONTHS[date[1]];
+    return date[2] + " " + month + " " + date[3];
   };
 
   CPMU.prototype.next_month = function(val1=null){
     this.checkerror(val1);
     return new Date(val1.setMonth(val1.getMonth() + 1));
-  };
-
-  CPMU.prototype.last_month = function(val1=null){
-    this.checkerror(val1);
-    return new Date(val1.setMonth(val1.getMonth() - 1));
   };
 
   CPMU.prototype.complaints = function(val1=null){
@@ -41,7 +41,7 @@
     var nextDate = new Date(val1[0].Month);
     for(var i=0; i<val1.length; i++){
       while (new Date(val1[i].Month).toDateString() !== new Date(nextDate).toDateString()) {
-        result.push([this.last_month(new Date(nextDate)), 0, 0]);
+        result.push([new Date(nextDate), 0, 0]);
         nextDate = this.next_month(nextDate);
       }
       result.push([val1[i].Month, val1[i].Complaints, val1[i].UnitsSold]);

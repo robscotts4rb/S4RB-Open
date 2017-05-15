@@ -33,13 +33,13 @@ class CPMU
 
     val1.each_with_index do |data, index|
       while (DateTime.parse(val1[index]["Month"]).to_s != month_val.to_s) do
-        complaints << [0,0]
+        complaints << [month_val, 0,0]
         month_val = next_month(month_val.to_s)
       end
-      complaints << [val1[index]["Complaints"].to_f,val1[index]["UnitsSold"].to_f]
+      complaints << [val1[index]["Month"], val1[index]["Complaints"].to_f,val1[index]["UnitsSold"].to_f]
       month_val = next_month(val1[index]["Month"])
     end
-    
+
     complaints
   end
 
