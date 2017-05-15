@@ -1,0 +1,14 @@
+<h2>Monthly - Complaints per million</h2>
+<table border="1">
+  <tr>
+    <td width="200"><b>Date</b></td>
+    <td width="200"><b>CPMU</b></td>
+  </tr>
+  <% @data.each do |cpmu_data| %>
+    <% total = CPMU.calculate(cpmu_data["Complaints"].to_f,cpmu_data["UnitsSold"].to_f)%>
+    <tr>
+        <td width="200"><%= CPMU.display_date(cpmu_data["Value.date"]) %></td>
+        <td width="200"><%= total %></td>
+    </tr>
+  <%end%>
+</table>
