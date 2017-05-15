@@ -8,14 +8,13 @@ function monthyView(response, monthlyCPMU = new CPMU()){
   for(var i=0; i<response.length; i++){
     while (new Date(response[i].Month).toDateString() !== new Date(nextDate).toDateString()) {
       text += "<tr><td width='200'>"+monthlyCPMU.display_date(nextDate)+"</td><td width='200'>0.00000</td></tr>";
-      nextDate = new Date(nextDate.setMonth(nextDate.getMonth() + 1));
+      nextDate = monthlyCPMU.next_month(nextDate);
     }
     var val1 = response[i].Complaints;
     var val2 = response[i].UnitsSold;
     var val3 = response[i].Month;
     text += "<tr><td width='200'>"+monthlyCPMU.display_date(val3)+"</td><td width='200'>"+monthlyCPMU.calculate(val1, val2)+"</td></tr>";
-    nextDate = new Date(response[i].Month);
-    nextDate = new Date(nextDate.setMonth(nextDate.getMonth() + 1));
+    nextDate = monthlyCPMU.next_month(new Date(response[i].Month));
   }
 
   document.getElementById('table').innerHTML = text+"</table>";
