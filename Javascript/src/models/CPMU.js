@@ -29,6 +29,27 @@
     return new Date(val1.setMonth(val1.getMonth() + 1));
   };
 
+  CPMU.prototype.last_month = function(val1=null){
+    this.checkerror(val1);
+    return new Date(val1.setMonth(val1.getMonth() - 1));
+  };
+
+  CPMU.prototype.complaints = function(val1=null){
+    this.checkerror(val1);
+
+    result = [];
+    var nextDate = new Date(val1[0].Month);
+    for(var i=0; i<val1.length; i++){
+      while (new Date(val1[i].Month).toDateString() !== new Date(nextDate).toDateString()) {
+        result.push([this.last_month(new Date(nextDate)), 0, 0]);
+        nextDate = this.next_month(nextDate);
+      }
+      result.push([val1[i].Month, val1[i].Complaints, val1[i].UnitsSold]);
+      nextDate = this.next_month(new Date(val1[i].Month));
+    }
+    return result;
+  };
+
   CPMU.prototype.checkerror = function(val1=-1, val2=-1){
     if(val1===null || val2===null){
       throw new Error("Values not defined");
