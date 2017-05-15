@@ -1,4 +1,4 @@
-# S4RB Task - Adrian Eyre#
+# S4RB Task - Adrian Eyre #
 
 ## Index
 * [Task Outline](#Task)
@@ -41,9 +41,9 @@ I have solved this task with three different solutions. The first was using Java
 ### Steps taken
 I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
 
-I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Good software craftsmanship was used through the project such as dependency injecting other classes into the class so that each class had a single purpose.
+I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Each part of the MVC model is separated into their respective folders so that the code is easily read and maintained.
 
-Class hierarchy wasn’t used in this project as it was a small simple program and was not needed.
+Good software craftsmanship was used throughout the project such as dependency injecting other classes into the class so that each class had a single purpose.
 
 Tests were put into place before any code was written so that it was clear what was needed to be produced before implementation of code.
 
