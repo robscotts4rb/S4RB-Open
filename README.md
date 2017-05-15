@@ -3,6 +3,10 @@
 ## Index
 * [Task Outline](#Task)
 * [User Stories](#Story)
+* [Thought Process](#thought)
+* [Javascript with jQuery](#jquery)
+* [Ruby with Sinatra](#sinatra)
+* [Javascript with Angular 2](#angular)
 
 ## <a name="Task">Task Outline</a>
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
@@ -30,7 +34,11 @@ So that I know each month has data
 I would like to view month with 0 complaints as 0.00000000
 ```
 
+## <a name="thought">Thought Process</a>
 
+
+## <a name="server">Json Server</a>
+### Setup
 The internal json rest api can be hosted locally using the following commands:
 
 ```shell
@@ -38,6 +46,13 @@ $ npm install -g json-server
 
 $ json-server --watch db/db.json
 ```
+
+## <a name="jquery">Javascript with jQuery</a>
+
+## <a name="sinatra">Ruby with Sinatra</a>
+
+## <a name="angular">Javascript with Angular 2</a>
+
 
 ## 1. Develop a basic reporting portal using any frameworks you see fit for purpose.
 
