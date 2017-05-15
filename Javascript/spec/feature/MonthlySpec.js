@@ -3,7 +3,7 @@ describe('Monthly View', function() {
   beforeEach(function() {
     response = [
                 {
-                  "Value.date": "2012-01-01T00:00:00",
+                  "Month": "2012-01-01T00:00:00",
                   "Complaints": 27,
                   "UnitsSold": 4932508
                 }

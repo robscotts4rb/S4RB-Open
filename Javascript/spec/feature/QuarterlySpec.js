@@ -2,32 +2,32 @@ describe('Quarterly View', function() {
   beforeEach(function() {
     response = [
                 {
-                  "Value.date": "2012-01-01T00:00:00",
+                  "Month": "2012-01-01T00:00:00",
                   "Complaints": 27,
                   "UnitsSold": 4932508
                 },
                 {
-                  "Value.date": "2012-02-01T00:00:00",
+                  "Month": "2012-02-01T00:00:00",
                   "Complaints": 5,
                   "UnitsSold": 86720
                 },
                 {
-                  "Value.date": "2012-03-01T00:00:00",
+                  "Month": "2012-03-01T00:00:00",
                   "Complaints": 10,
                   "UnitsSold": 824680
                 },
                 {
-                  "Value.date": "2012-04-01T00:00:00",
+                  "Month": "2012-04-01T00:00:00",
                   "Complaints": 25,
                   "UnitsSold": 756023
                 },
                 {
-                  "Value.date": "2012-05-01T00:00:00",
+                  "Month": "2012-05-01T00:00:00",
                   "Complaints": 8,
                   "UnitsSold": 118029
                 },
                 {
-                  "Value.date": "2012-06-01T00:00:00",
+                  "Month": "2012-06-01T00:00:00",
                   "Complaints": 15,
                   "UnitsSold": 160122
                 }
