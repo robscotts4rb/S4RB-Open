@@ -19,7 +19,8 @@ describe JsonApi do
     end
 
     it "should return JSON data" do
-      expect(subject.readAPI()[0]["Value.date"]).not_to be nil
+      expect(subject.readAPI()[0]["Quarter"]).not_to be nil
+      expect(subject.readAPI()[0]["Month"]).not_to be nil
       expect(subject.readAPI()[0]["Complaints"]).not_to be nil
       expect(subject.readAPI()[0]["UnitsSold"]).not_to be nil
     end
