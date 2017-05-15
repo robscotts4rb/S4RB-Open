@@ -49,7 +49,7 @@ Tests were put into place before any code was written so that it was clear what 
 
 ### Class Structure
 |JSONApi       |
-|----|
+|----| ---- |
 |readApi()     | Reads Json object and returns data |
 
 
