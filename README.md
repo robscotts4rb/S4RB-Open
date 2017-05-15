@@ -4,9 +4,9 @@
 * [Task Outline](#Task)
 * [User Stories](#Story)
 * [Thought Process](#thought)
-* [Javascript with jQuery](#jquery)
+* [JavaScript with jQuery](#jquery)
 * [Ruby with Sinatra](#sinatra)
-* [Javascript with Angular 2](#angular)
+* [JavaScript with Angular 2](#angular)
 
 ## <a name="Task">Task Outline</a>
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
@@ -70,16 +70,53 @@ The internal json rest api can be hosted locally using the following commands:
 
 ```shell
 $ npm install -g json-server
-
 $ json-server --watch db/db.json
+
+Open http://localhost:3000/CPMU in your web browser
 ```
 
-## <a name="jquery">Javascript with jQuery</a>
+## <a name="jquery">JavaScript with jQuery</a>
+### Setup
+The JavaScript with jQuery can be hosted locally using the following commands:
+```shell
+$ cd Javascript
+```
+Running the Jasmine test
+```
+Open SpecRunner.html in your web browser
+```
+Running the web application
+```
+Open index.html in your web browser
+```
 
 ## <a name="sinatra">Ruby with Sinatra</a>
+### Setup
+The Ruby with Sinatra can be hosted locally using the following commands:
+```shell
+$ cd Ruby
+$ bundle
+$ rvm 2.3.3
+```
+Running the Rspec test
+```
+$ rspec
+```
+Running the web application
+```
+$ ruby ./app/controller.rb
+Open http://localhost:4567 in your web browser
+```
 
-## <a name="angular">Javascript with Angular 2</a>
-
+## <a name="angular">JavaScript with Angular 2</a>
+The JavaScript with Angular 2 can be hosted locally using the following commands:
+```shell
+$ cd Angular
+```
+Running the web application
+```
+Open index.html in your web browser
+```
 
 ## 1. Develop a basic reporting portal using any frameworks you see fit for purpose.
 
