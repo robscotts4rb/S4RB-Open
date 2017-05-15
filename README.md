@@ -36,16 +36,16 @@ I would like to view missing months with the CPMU as 0.00000
 
 ## <a name="thought">Thought Process</a>
 
-I have solved this task with three different solutions. The first was using JavaScript and jQuery, the second Ruby with Sinatra the the third with JavaScript and Angular. Each version is fully tests in it retrospective test framework with unit and feature tests. The Angular 2 version was used to experiment with using the framework. I have submitted all three solutions to show different coding qualities in each of the frameworks.
+I have solved this task with three different solutions. The first was using JavaScript and jQuery, the second Ruby with Sinatra the the third with JavaScript and Angular. Each version is fully tests in it retrospective test framework with unit and feature tests. The Angular version was used to experiment with using the framework. I have submitted all three solutions to show different coding in each of the frameworks.
 
 ### Steps taken
 I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
 
-I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Each part of the MVC model is separated into their respective folders so that the code is easily read and maintained.
+I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Each part of the MVC model is separated into their respective folders so that the code is easily read and maintained. Instance methods were used throughout the project meaning that less memory is needed to execute the code.
 
-Good software craftsmanship was used throughout the project such as dependency injecting other classes into the class so that each class had a single purpose.
+Good software craftsmanship was used throughout the project such as dependency injecting other classes into the class so that each class had a single responsibility.
 
-Tests were put into place before any code was written so that it was clear what was needed to be produced before implementation of code.
+Tests were put into place before any code was written so that it was clear what was needed to be produced before implementing code.
 
 ### Class Structure
 JSONApi
