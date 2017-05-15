@@ -43,8 +43,8 @@ describe('CPMU', function() {
       expect(function() {cpmu.display_date();}).toThrowError("Values not defined");
     });
     it("should display date in nice format", function() {
-      expect(cpmu.display_date("2012-01-01T00:00:00")).toEqual("01 Jan 2012");
-      expect(cpmu.display_date("2050-12-31T00:00:00")).toEqual("31 Dec 2050");
+      expect(cpmu.display_date("2012-01-01T00:00:00")).toEqual("01 January 2012");
+      expect(cpmu.display_date("2050-12-31T00:00:00")).toEqual("31 December 2050");
     });
   });
 

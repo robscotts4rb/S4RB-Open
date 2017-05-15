@@ -16,7 +16,7 @@ describe('Monthly View', function() {
       expect(document.getElementById('title').innerHTML).toContain("Montly - Complaints per million");
       expect(document.getElementById('table').innerHTML).toContain("Date");
       expect(document.getElementById('table').innerHTML).toContain("CPMU");
-      expect(document.getElementById('table').innerHTML).toContain("01 Jan 2012");
+      expect(document.getElementById('table').innerHTML).toContain("01 January 2012");
       expect(document.getElementById('table').innerHTML).toContain("5.47388874");
     });
   });
