@@ -1,7 +1,35 @@
-# Interview Questions #
+# S4RB Task #
 
+## Index
+* [Task Outline](#Task)
+* [User Stories](#Story)
+
+## <a name="Task">Task Outline</a>
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
 The company already has an internal json rest api that stores all the complaints that the business has recieved and the number of corresponding sales in that period.
+
+## <a name="Story">User Stories</a>
+```
+As an Account Manager
+So that I can improve the server to our customers
+I would like to view complaint figures
+```
+```
+As an Account Manager
+So that I know the complaint figures each month
+I would like to view complaint listed monthly
+```
+```
+As an Account Manager
+So that I know the complaint figures each quarter
+I would like to view complaint listed quarterly
+```
+```
+As an Account Manager
+So that I know each month has data
+I would like to view month with 0 complaints as 0.00000000
+```
+
 
 The internal json rest api can be hosted locally using the following commands:
 
