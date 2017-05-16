@@ -28,7 +28,7 @@
     <td width="200"><b>CPMU</b></td>
   </tr>
   <tr data-ng-repeat="CPMU in CPMU">
-    <td width="200">{{CPMU["Value.date"] | date:'MMMM dd, yyyy'}}</td>
+    <td width="200">{{CPMU.Month | date:'MMMM dd, yyyy'}}</td>
     <td width="200">{{CPMU.Complaints / CPMU.UnitsSold * 1000000 | number: 8}}</td>
   </tr>
 </table>
