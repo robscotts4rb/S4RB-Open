@@ -2,11 +2,8 @@ describe('Monthly View', function() {
 
   beforeEach(function() {
     response = [
-                {
-                  "Month": "2012-01-01T00:00:00",
-                  "Complaints": 27,
-                  "UnitsSold": 4932508
-                }
+                {"Quarter": "1", "Month": "2012-01-01T00:00:00", "Complaints": 27, "UnitsSold": 4932508 },
+                {"Quarter": "1", "Month": "2012-03-01T00:00:00", "Complaints": 10, "UnitsSold": 824680 },
               ];
   });
 
@@ -18,6 +15,10 @@ describe('Monthly View', function() {
       expect(document.getElementById('table').innerHTML).toContain("CPMU");
       expect(document.getElementById('table').innerHTML).toContain("01 January 2012");
       expect(document.getElementById('table').innerHTML).toContain("5.47388874");
+
+      // Missing month
+      expect(document.getElementById('table').innerHTML).toContain("01 February 2012");
+      expect(document.getElementById('table').innerHTML).toContain("0.00000");
     });
   });
 

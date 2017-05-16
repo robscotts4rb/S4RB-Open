@@ -12,11 +12,6 @@ describe('Quarterly View', function() {
                   "UnitsSold": 86720
                 },
                 {
-                  "Month": "2012-03-01T00:00:00",
-                  "Complaints": 10,
-                  "UnitsSold": 824680
-                },
-                {
                   "Month": "2012-04-01T00:00:00",
                   "Complaints": 25,
                   "UnitsSold": 756023
@@ -40,7 +35,9 @@ describe('Quarterly View', function() {
       expect(document.getElementById('title').innerHTML).toContain("Quarterly - Complaints per million");
       expect(document.getElementById('table').innerHTML).toContain("Quarter");
       expect(document.getElementById('table').innerHTML).toContain("CPMU");
-      expect(document.getElementById('table').innerHTML).toContain("7.18697146");
+
+      // Account for missing month
+      expect(document.getElementById('table').innerHTML).toContain("6.37548244");
       expect(document.getElementById('table').innerHTML).toContain("46.41385299");
     });
   });

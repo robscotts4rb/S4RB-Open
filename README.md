@@ -7,6 +7,7 @@
 * [JavaScript with jQuery](#jquery)
 * [Ruby with Sinatra](#sinatra)
 * [JavaScript with Angular](#angular)
+* [Screenshots](#Shots)
 
 ## <a name="Task">Task Outline</a>
 Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.
@@ -132,3 +133,10 @@ Running the web application
 ```
 Open index.html in your web browser
 ```
+
+## <a name="Shots">Screenshots</a>
+### Monthly view
+![Screenshot 1](/Images/screenshot1.png "Screenshot 1")
+
+### Quarterly View
+![Screenshot 2](/Images/screenshot2.png "Screenshot 2")
