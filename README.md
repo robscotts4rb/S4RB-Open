@@ -41,6 +41,8 @@ I have solved this task with three different solutions. The first was using Java
 ### Steps taken
 I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
 
+My main objective of this task was to write clean DRY manageable code that met the task specification.
+
 I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Each part of the MVC model is separated into their respective folders so that the code is easily read and maintained. Instance methods were used throughout the project meaning that less memory is needed to execute the code.
 
 Good software craftsmanship was used throughout the project such as dependency injecting other classes into the class so that each class had a single responsibility.
@@ -66,10 +68,15 @@ CPMU
 | complaints   | Calculate any missing months
 
 ## <a name="server">Json Server</a>
+<b> Please Note </b> This Json Server uses the latest version of the Json file that has the following format
+```
+{"Quarter": "1", "Month": "2012-01-01T00:00:00", "Complaints": 27, "UnitsSold": 4932508 }
+```
+
 ### Setup
 The internal json rest api can be hosted locally using the following commands:
 
-```shell
+```
 $ npm install -g json-server
 $ json-server --watch db/db.json
 
@@ -77,11 +84,11 @@ Open http://localhost:3000/CPMU in your web browser
 ```
 
 ## <a name="jquery">JavaScript with jQuery</a>
-This version is coded using JavaScript as the language with jQuery controlling the interactive elements of the page. It has been broken down into different classes with single responsibilities and easily extendable. 
+This version is coded using JavaScript as the language with jQuery controlling the interactive elements of the page. It has been broken down into different classes with single responsibilities and easily extendable.
 
 ### Setup
 The JavaScript with jQuery can be hosted locally using the following commands:
-```shell
+```
 $ cd Javascript
 ```
 Running the Jasmine test
@@ -98,7 +105,7 @@ This version is coded using Ruby and the Sinatra framework which is a light weig
 
 ### Setup
 The Ruby with Sinatra can be hosted locally using the following commands:
-```shell
+```
 $ cd Ruby
 $ bundle
 $ rvm 2.3.3
@@ -118,7 +125,7 @@ This version is also coded in JavaScript using the Angular framework using a con
 
 ### Setup
 The JavaScript with Angular can be hosted locally using the following commands:
-```shell
+```
 $ cd Angular
 ```
 Running the web application

@@ -10,6 +10,5 @@ function monthyView(response, monthlyCPMU = new CPMU()){
     if(total==="NaN") total="0.00000";
     text += "<tr><td width='200'>"+monthlyCPMU.display_date(data[i][0])+"</td><td width='200'>"+total+"</td></tr>";
   }
-
   document.getElementById('table').innerHTML = text+"</table>";
 }
