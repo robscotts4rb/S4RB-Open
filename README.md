@@ -42,7 +42,7 @@ I have solved this task with three different solutions. The first was using Java
 ### Steps taken
 I started by creating the user stories from the task that was given to me, breaking them down into manageable chunks.
 
-My main objective of this task was to write clean DRY manageable code that met the task specification.
+My main objective for this task was to write clean DRY manageable code that met the task specification.
 
 I incorporated the MVC model for both the JavaScript and Ruby versions splitting the dependencies out into classes. Each part of the MVC model is separated into their respective folders so that the code is easily read and maintained. Instance methods were used throughout the project meaning that less memory is needed to execute the code.
 
