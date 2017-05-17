@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-ng-app="app">
+
+<style>
+  table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+</style>
+
+<head>
+    <title>S4RB</title>
+</head>
+<body data-ng-controller="IndexController">
+
+<h2>Complaints per million units</h2>
+
+<table border="1">
+  <tr>
+    <td width="200"><b>Month</b></td>
+    <td width="200"><b>CPMU</b></td>
+  </tr>
+  <tr data-ng-repeat="CPMU in CPMU">
+    <td width="200">{{CPMU.Month | date:'MMMM dd, yyyy'}}</td>
+    <td width="200">{{CPMU.Complaints / CPMU.UnitsSold * 1000000 | number: 8}}</td>
+  </tr>
+</table>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

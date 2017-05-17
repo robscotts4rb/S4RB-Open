@@ -1,0 +1,15 @@
+<h2>Monthly - Complaints per million</h2>
+<table border="1">
+  <tr>
+    <td width="200"><b>Date</b></td>
+    <td width="200"><b>CPMU</b></td>
+  </tr>
+  <% @data.each do |cpmu_data| %>
+    <% total = CPMU.calculate(cpmu_data[1].to_f,cpmu_data[2].to_f).to_s%>
+    <% total = "0.00000" if total == "NaN" %>
+    <tr>
+        <td width="200"><%= CPMU.display_date(cpmu_data[0].to_s) %></td>
+        <td width="200"><%= total %></td>
+    </tr>
+  <%end%>
+</table>

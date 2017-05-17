@@ -1,0 +1,18 @@
+<h2>Quarterly - Complaints per million</h2>
+<table border="1">
+  <tr>
+    <td width="40"><b>Quarter</b></td>
+    <td width="200"><b>CPMU</b></td>
+  </tr>
+  <% (0..@data.length-3).step(3).each do |index| %>
+    <% complaintsTotal = 0; unitsSold = 0 %>
+    <% (index..index+2).each do |quart| %>
+      <% complaintsTotal += @data[quart][1].to_f %>
+      <% unitsSold += @data[quart][2].to_f %>
+    <% end %>
+    <tr>
+        <td width="40"><%= CPMU.quartile(index) %></td>
+        <td width="200"><%= CPMU.calculate(complaintsTotal, unitsSold) %></td>
+    </tr>
+  <%end%>
+</table>
