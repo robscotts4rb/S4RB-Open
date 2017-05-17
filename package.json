@@ -1,0 +1,44 @@
+{
+  "name": "s4rb-open",
+  "version": "1.0.0",
+  "description": "Imagine you have been tasked by the Account Manager to create a basic reporting application that will allow the account manager to view complaints via a online portal.\r The company already has an internal json rest api that stores all the complaints that the business has recieved and the number of corresponding sales in that period.",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "tests": "mocha",
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkwebable/S4RB-Open.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inkwebable/S4RB-Open/issues"
+  },
+  "homepage": "https://github.com/inkwebable/S4RB-Open#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "express": "^4.15.2",
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
+    "morgan": "~1.7.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.1",
+    "request": "^2.81.0",
+    "request-promise-any": "^1.0.3",
+    "vue": "^2.3.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "laravel-mix": "^0.11.4",
+    "mocha": "^3.3.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^2.2.0",
+    "supertest": "^3.0.0"
+  }
+}

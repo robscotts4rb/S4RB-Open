@@ -1,0 +1,45 @@
+
+@import "buttons";
+@import "tables";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 10px;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  font-size:0.9em;
+}

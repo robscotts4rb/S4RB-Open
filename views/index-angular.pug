@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.container
+    h1= title
+    div(ng-app="myApp" ng-controller="myCtrl" ng-init="init("+data+")" ng-cloak).content
+      div.tbl-options
+        div.btn-group.pull-left
+          button(ng-hide="showQuarterly" ng-click="quartToggle()").btn Show Quarterly
+          button(ng-show="showQuarterly" ng-click="quartToggle()").btn Show Monthly
+          br
+          br
+      table
+        thead
+          tr
+            th(ng-hide="showQuarterly") Month
+            th(ng-show="showQuarterly") Quarter
+            th CPMU
+        tbody
+          tr(ng-repeat="item in items | cpmu")
+            td(style="width:50%" ng-show="showQuarterly") {{item['date']}}
+            td(style="width:50%" ng-hide="showQuarterly") {{item['Value.date'] | myDateFormat}}
+            td(style="width:50%") {{item.cpmu}}
+
+block scripts
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
+  script(src='/js/cpmu.js')

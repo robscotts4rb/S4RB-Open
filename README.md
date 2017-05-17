@@ -55,3 +55,19 @@ Should be displayed as:
 |01 April 2012|	0.00000|
 |01 June 2012|	93.67857009|
 |01 July 2012|	57.29516406|
+
+## Instructions - T.N
+
+Npm install, run the json server as per instructions at the top of the readme.
+
+Run server - port 60809
+
+```
+$ npm run server
+```
+
+Run tests
+
+```
+$ npm run tests
+```
